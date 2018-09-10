@@ -1,10 +1,16 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-public class MarkdownTextCreator
+public class MenuItemCreateText
 {
-    [MenuItem("Assets/Create/Markdown")]
-    public static void Create()
+    [MenuItem("Assets/Create/Text/Csv(.csv)", false, 82)]
+    public static void CreateTextCsv()
+    {
+        CreateAssetFile("Csv.csv");
+    }
+
+    [MenuItem("Assets/Create/Text/Markdown(.md)", false, 82)]
+    public static void CreateTextMarkdown()
     {
         // NOTE:
         // Following code doesn't works well.
@@ -16,11 +22,22 @@ public class MarkdownTextCreator
         // }
         // AssetDatabase.CreateAsset(textAsset, "MarkdownText.md");
 
+        CreateAssetFile("Markdown.md");
+    }
+
+    [MenuItem("Assets/Create/Text/Text(.txt)", false, 82)]
+    public static void CreateTextTxt()
+    {
+        CreateAssetFile("Text.txt");
+    }
+
+    public static void CreateAssetFile(string nameWithExtension, string contents = "")
+    {
         string assetPath = GetCurrentAssetDirectoryPath();
 
-        assetPath = assetPath + "/MarkdownText.md";
+        assetPath = assetPath + "/" + nameWithExtension;
 
-        System.IO.File.WriteAllText(assetPath, "");
+        System.IO.File.WriteAllText(assetPath, contents);
 
         AssetDatabase.Refresh();
 
@@ -57,18 +74,5 @@ public class MarkdownTextCreator
         EditorUtility.FocusProjectWindow();
 
         projectWindow.SendEvent(Event.KeyboardEvent(KeyCode.F2.ToString()));
-    }
-
-    private static void CheckUnity3DWindowNames()
-    {
-        // NOTE:
-        // This function is used to check Unity window name. So mainly for debug.
-
-        EditorWindow[] editorWindows = Resources.FindObjectsOfTypeAll<EditorWindow>();
-
-        foreach (EditorWindow editorWindow in editorWindows)
-        {
-            Debug.Log(editorWindow.GetType().ToString());
-        }
     }
 }
