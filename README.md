@@ -9,3 +9,9 @@ Add some menu item to create text resource like csv(.csv), markdown(.md) and pla
 You can import this asset from UnityPackage.
 
 - [MenuItemCreateText.unitypackage](https://github.com/XJINE/Unity_MenuItemCreateText/blob/master/MenuItemCreateText.unitypackage)
+
+### Dependencies
+
+You have to import following assets to use this asset.
+
+- [Unity_AssetCreationHelper](https://github.com/XJINE/Unity_AssetCreationHelper)
