@@ -1,17 +1,19 @@
-# Unity_MenuItemCreateText
+# Unity_CreateTextMenu
 
-Add some menu item to create text resource like csv(.csv), markdown(.md) and plain-text(.txt).
+Add menu item to create text resource like csv(.csv), markdown(.md) and plain-text(.txt).
 
-![](https://github.com/XJINE/Unity_MenuItemCreateText/blob/master/screenshot.png)
+![](https://github.com/XJINE/Unity_CreateTextMenu/blob/main/screenshot.png)
 
-## Import to Your Project
+## Importing
 
-You can import this asset from UnityPackage.
+You can use Package Manager or import it directly.
 
-- [MenuItemCreateText.unitypackage](https://github.com/XJINE/Unity_MenuItemCreateText/blob/master/MenuItemCreateText.unitypackage)
+```
+https://github.com/XJINE/Unity_CreateTextMenu.git?path=Assets/Packages/CreateTextMenu
+```
 
 ### Dependencies
 
-You have to import following assets to use this asset.
+This project use following resources.
 
 - [Unity_AssetCreationHelper](https://github.com/XJINE/Unity_AssetCreationHelper)

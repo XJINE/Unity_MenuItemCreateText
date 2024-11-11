@@ -1,19 +1,7 @@
-﻿#if UNITY_EDITOR
+﻿using UnityEditor;
 
-using UnityEditor;
-
-public class MenuItemCreateText
+public class CreateTextMenu
 {
-    // NOTE:
-    // Following code doesn't works well.
-    //
-    // TextAsset textAsset = new TextAsset();
-    // if (textAsset == null)
-    // {
-    //     Debug.Log("textAsset is null.");
-    // }
-    // AssetDatabase.CreateAsset(textAsset, "MarkdownText.md");
-
     [MenuItem("Assets/Create/Text/Csv(.csv)", false, 82)]
     public static void CreateTextCsv()
     {
@@ -32,5 +20,3 @@ public class MenuItemCreateText
         AssetCreationHelper.CreateAssetInCurrentDirectory("", "Text.txt");
     }
 }
-
-#endif // UNITY_EDITOR
